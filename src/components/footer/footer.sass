@@ -1,0 +1,89 @@
+@import '../../assets/styles/variables'
+
+.footer
+  background-color: $black
+  
+  &__navigation
+    display: flex
+    border-bottom: 2px solid $black-lighter
+    padding-bottom: 2rem
+    align-items: baseline
+    .company-logo
+      width: 20%
+      .dept-logo
+        fill: $white
+        height: 1.5rem
+
+    .links
+      width: 60%
+      .link
+        color: $white
+        padding-right: 1.2rem
+        font-size: $xsmall-font-size
+        text-transform: uppercase
+        text-decoration: none
+
+    .social-media
+      width: 20%
+      text-align: right
+      .logo
+        fill: white
+        height: 1rem
+
+  &__company-info
+    display: flex
+    justify-content: right
+    padding-bottom: 2rem
+    .info-text-container
+      width: 60%
+      display: flex
+
+    .cc-container
+      width: 20%
+      text-align: right
+
+    .footer-text
+      color: $light-grey
+      font-size: $tiny-font-size
+      padding-right: 1.2rem
+      padding-top: 4rem
+      text-decoration: none
+      margin: 0
+    
+  @include for-phone-only 
+    &__navigation
+      width: 100%
+      justify-content: space-between
+      .company-logo
+        display: none
+
+      .links, .social-media
+        display: flex
+        flex-direction: column
+
+      .links
+        .link
+          font-size: $large-font-size
+
+      .social-media
+        .social-media-link
+          padding-bottom: 1rem
+        .logo
+          width: 2rem
+          height: 2rem
+          
+    &__company-info
+      flex-direction: column
+      padding-top: 3rem
+      .info-text-container
+        flex-direction: column
+
+      .footer-text
+        padding-top: 0
+        font-size: $xsmall-font-size
+
+      .cc-container
+        width: 100%
+        text-align: left
+        padding-top: 2rem
+        padding-bottom: 2rem

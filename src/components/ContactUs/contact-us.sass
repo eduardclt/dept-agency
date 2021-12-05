@@ -1,0 +1,55 @@
+@import '../../assets/styles/variables'
+
+.contact-us
+  display: flex
+  padding-bottom: 4rem
+  &__title-container
+    width: 30%
+    padding-right: 2rem
+    .title
+      margin: 0
+      font-size: $xlarge-font-size
+      font-family: 'teko-light'
+
+  &__form
+    width: 70%
+    .form-row
+      display: flex
+      padding-bottom: 1rem
+      .form-field
+        width: 50%
+        .label
+          font-family: Arial
+          font-weight: bold
+          font-size: $tiny-font-size
+          text-transform: uppercase
+
+        input, textarea
+          width: 80%
+
+    .button
+      background-color: $blue
+      padding: 1rem 3rem
+      color: $white
+      font-size: 1.2rem
+      border: none
+
+  @include for-phone-only 
+    flex-direction: column
+    &__title-container
+      width: 100%
+      text-align: center
+      
+      .title
+        font-size: $small-font-size
+
+    &__form
+      width: 100%
+      .form-row
+        flex-direction: column
+        .form-field
+          width: 100%
+          padding-top: 2rem
+          input, textarea
+            width: 100%
+            

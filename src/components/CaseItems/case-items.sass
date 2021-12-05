@@ -1,0 +1,15 @@
+@import '../../assets/styles/variables'
+
+.case-items
+  &__quote
+    padding-bottom: 4rem
+    width: 60%
+    margin: auto
+    .reference
+      font-family: Arial
+      font-size: $tiny-font-size
+      font-weight: bold
+
+  @include for-phone-only 
+    &__quote
+      width: 100%

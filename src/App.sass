@@ -1,0 +1,42 @@
+@import './assets/styles/variables'
+
+select
+  font-family: 'teko-regular'
+
+input, textarea
+  border: none
+  border-bottom: 1px solid $light-grey
+  padding: 1rem 0
+
+  &:focus
+    outline: none
+
+select
+  border: none
+  border-bottom: 1px solid black
+  &:focus
+    outline: none
+
+    
+textarea
+  resize: none
+
+h1, h2, h3, h4, h5
+  letter-spacing: $small-letter-spacing
+
+h1
+  text-transform: uppercase
+
+p
+  font-size: $medium-font-size
+
+.component
+  padding-top: 1rem 
+  padding-left: 1rem
+  padding-right: 1rem
+  
+  @include for-desktop-up
+    padding-top: 4rem 
+    padding-left: 8rem
+    padding-right: 8rem
+   

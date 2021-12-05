@@ -1,0 +1,45 @@
+// ----- Colours -----
+
+$white:         #fff
+$black:         #0e0e0e
+$black-lighter: #272727
+$light-grey:    #a3a3a3
+$xlight-grey:   #dddddd
+$red:           #ff2929
+$blue:          #1a18f7
+
+// ----- Font Sizes -----
+
+$tiny-font-size:    14px
+$xsmall-font-size:  17px
+$small-font-size:   24px
+$medium-font-size:  30px
+$large-font-size:   36px
+$xlarge-font-size:  60px
+
+// ----- Letter-spacing -----
+
+$small-letter-spacing:  2px
+$medium-letter-spacing: 4px
+
+// ----- Breakpoints -----
+
+@mixin for-phone-only
+  @media (max-width: 599px) 
+    @content
+    
+@mixin for-tablet-portrait-up
+  @media (min-width: 600px) 
+    @content
+    
+@mixin for-tablet-landscape-up
+  @media (min-width: 900px)
+     @content
+    
+@mixin for-desktop-up
+  @media (min-width: 1200px) 
+    @content
+    
+@mixin for-big-desktop-up
+  @media (min-width: 1800px) 
+    @content

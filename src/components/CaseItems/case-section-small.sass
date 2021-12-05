@@ -1,0 +1,13 @@
+@import '../../assets/styles/variables'
+
+.case-section-small
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  &__case
+    width: 48%
+
+  @include for-phone-only 
+    flex-direction: column
+    &__case
+      width: 100%

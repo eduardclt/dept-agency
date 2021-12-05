@@ -1,0 +1,39 @@
+@import '../../assets/styles/variables'
+
+.case-section-large
+  display: flex
+
+  &__with-image
+    width: 70%
+
+  &__details
+    width: 30%
+    padding-left: 2rem
+    .card-container
+      border-top: 1px solid $xlight-grey
+      padding-top: 2rem
+      &:last-child
+        border-bottom: 1px solid $xlight-grey
+
+  @include for-phone-only 
+    flex-direction: column
+    &__with-image
+      width: 100%
+
+    &__details
+      width: 100%
+      padding-left: 0rem
+      height: 100%
+      .card-container
+        padding-top: 1rem
+
+.reverse-direction
+  flex-direction: row-reverse
+  .case-section-large__details
+    padding-right: 2rem
+    
+  @include for-phone-only 
+    flex-direction: column
+    &__details
+      width: 100%
+      padding-right: 0rem

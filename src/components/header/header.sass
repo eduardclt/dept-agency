@@ -1,0 +1,74 @@
+@import '../../assets/styles/variables'
+
+.header
+  padding: 0
+  &__background
+    height: 100vh
+    background-image: url('../../assets/images/header.jpg') 
+    background-origin: content-box
+    background-repeat: no-repeat
+    background-size: cover
+    padding-right: 20px
+    padding-left: 20px
+    padding-top: 20px
+
+  &__button
+    background-color: $black
+    padding: 1rem 3rem
+    color: $white
+    font-size: 1.2rem
+    border: none
+    
+  @include for-phone-only 
+    &__background
+      height: 20rem
+      padding: 0
+    &__title
+      font-size: 3rem
+      position: unset
+      padding-top: 5rem
+      text-align: center
+    &__button
+      display: none
+      &--mobile
+        display: block
+        position: unset
+        margin-top: 1rem
+        margin-left: auto
+        margin-right: auto
+
+  @include for-tablet-portrait-up
+    &__title
+      font-size: 10rem
+      position: unset
+      padding-top: 5rem
+      text-align: center
+    &__button
+      display: none
+      &--mobile
+        display: block
+        position: unset
+        margin-top: 1rem
+        margin-left: auto
+        margin-right: auto
+
+  @include for-desktop-up
+    &__title
+      position: absolute 
+      top: 20%
+      font-size: 10rem
+      left: 8rem
+      h1
+        margin: 0
+        letter-spacing: 15px      
+        h1
+          margin: 0
+
+    &__button
+      position: absolute
+      display: block
+      bottom: 10%
+      right: 8rem
+
+      &--mobile
+        display: none
